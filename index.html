@@ -18,16 +18,6 @@
   fbq('init', '449193154116638');
   fbq('track', 'PageView');
   fbq('trackCustom', 'pag-obg-cardapio');
-
-  // Dispara Purchase com valor dinâmico vindo da URL (?valor=1090)
-  const _params = new URLSearchParams(window.location.search);
-  const _valor = _params.get('valor') ? parseInt(_params.get('valor')) / 100 : 10.90;
-  fbq('track', 'Purchase', {
-    currency: 'BRL',
-    value: _valor,
-    content_name: 'Cardápio para Lactantes',
-    content_type: 'product'
-  });
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=449193154116638&ev=PageView&noscript=1"
